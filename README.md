@@ -52,3 +52,8 @@ draggable="false"
 alt="😳"
 src="https://twemoji.maxcdn.com/36x36/1f633.png">
 ```
+
+# References
+
+1. Instagram developers [blog](http://instagram-engineering.tumblr.com/post/118304328152/emojineering-part-2-implementing-hashtag-emoji)
+2. Twemoji SVG [https://github.com/twitter/twemoji](https://github.com/twitter/twemoji)

@@ -7,18 +7,23 @@ import (
 	"github.com/stretchr/testify/assert"
 
 	"strconv"
+	"regexp"
 )
 
 func TestInsert(t *testing.T) {
+	container  := make(map[string]string)
 	parser := NewEmojiParser()
 
 	var text = "a #💩 #and #🍦 #😳"
 	var i = -1
 	replased := parser.ReplaceAllStringFunc(text, func(s string) string {
 		i++
+		key := "_$"+strconv.Itoa(i)+"_"
+		container[key] = s
+		return key
 		return strconv.Itoa(i)
 	})
-	assert.Equal(t, replased, "a #0 #and #1 #2")
+	assert.Equal(t, replased, "a #_$0_ #and #_$1_ #_$2_")
 
 	htmlEnt := parser.ToHtmlEntities(text)
 
@@ -40,4 +45,9 @@ draggable="false"
 alt="😳"
 src="https://twemoji.maxcdn.com/36x36/1f633.png">`
 	assert.Equal(t, htmlImg, assertion)
+
+	recovered := regexp.MustCompile(`\_\$\d+\_`).ReplaceAllStringFunc(replased, func(s string) string {
+		return container[s]
+	})
+	assert.Equal(t, recovered, text)
 }

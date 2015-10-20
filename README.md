@@ -1,6 +1,7 @@
 # go-emoji
 
 [![Build Status](https://travis-ci.org/urakozz/go-emoji.svg?branch=master)](https://travis-ci.org/urakozz/go-emoji)
+
 Golang Emoji parser, converter to html and images
 
 # Usage

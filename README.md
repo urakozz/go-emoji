@@ -60,3 +60,5 @@ src="https://twemoji.maxcdn.com/36x36/1f633.png">
 
 1. Instagram developers [blog](http://instagram-engineering.tumblr.com/post/118304328152/emojineering-part-2-implementing-hashtag-emoji)
 2. Twemoji SVG [https://github.com/twitter/twemoji](https://github.com/twitter/twemoji)
+3. Unicode Emojii data [emoji-data.txt](http://www.unicode.org/Public/emoji/1.0/emoji-data.txt)
+4. Unicode Tech Report 51 [tech report](http://www.unicode.org/reports/tr51/)

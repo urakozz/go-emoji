@@ -25,8 +25,7 @@ replased := parser.ReplaceAllStringFunc(text, func(s string) string {
 
 ```go
 parser := NewEmojiParser()
-var text = "a #💩 #and #🍦 #😳"
-var i = -1
+text := "a #💩 #and #🍦 #😳"
 replased := parser.ToHtmlEntities(text)
 // replased == "a #&#x1F4A9; #and #&#x1F366; #&#x1F633;"
 ```
@@ -35,8 +34,7 @@ replased := parser.ToHtmlEntities(text)
 
 ```go
 parser := NewEmojiParser()
-var text = "a #💩 #and #🍦 #😳"
-var i = -1
+text := "a #💩 #and #🍦 #😳"
 replased := parser.ToHtmlImages(text)
 ```
 result:
